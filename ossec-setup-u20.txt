@@ -7,19 +7,20 @@ OSSEC SET UP
 5.) sudo apt install -y php php-cli php-common libapache2-mod-php apache2-utils sendmail inotify-tools
 6.) sudo apt install libz-dev libssl-dev libpcre2-dev build-essential libsystemd-dev
 7.) sudo apt install mailutils
-8.) wget https://github.com/ossec/ossec-hids/archive/refs/heads/master.zip && unzip master.zip
-9.) rm master.zip && cd ./ossec-hids-master
-10.) sudo sh install.sh
-11.) enter in root@localhost for email
-12.) sudo /var/ossec/bin/ossec-control start
-13.) cd /srv/
-14.) sudo git clone https://github.com/ossec/ossec-wui.git
-15.) sudo mv /srv/ossec-wui /var/www/html
-16.) cd /var/www/html/ossec-wui && sudo ./setup.sh
-17.) enter www-data
-18.) cd ~
-19.) sudo chown -R www-data:www-data /var/www/html/ossec-wui/
-20.) sudo chmod -R 755 /var/www/html/ossec-wui/
-21.) sudo a2enmod rewrite
-22.) sudo systemctl restart apache2
-23.) xdg-open http://127.0.0.1/ossec-wui
+8.) (if you do not have git installed yet) sudo apt-get install git
+9.) wget https://github.com/ossec/ossec-hids/archive/refs/heads/master.zip && unzip master.zip
+10.) rm master.zip && cd ./ossec-hids-master
+11.) sudo sh install.sh
+12.) ("->"= Return/Enter) type "en" -> -> "local" -> -> -> "root@localhost" -> -> -> -> -> -> -> -> *Press Enter to Finish*
+13.) sudo /var/ossec/bin/ossec-control start
+14.) cd /srv/
+15.) sudo git clone https://github.com/ossec/ossec-wui.git
+16.) sudo mv /srv/ossec-wui /var/www/html
+17.) cd /var/www/html/ossec-wui && sudo ./setup.sh
+18.) type "$YourUsername" "$YourPassword" "www-data"
+19.) cd ~
+20.) sudo chown -R www-data:www-data /var/www/html/ossec-wui/
+21.) sudo chmod -R 755 /var/www/html/ossec-wui/
+22.) sudo a2enmod rewrite
+23.) sudo systemctl restart apache2
+24.) xdg-open http://127.0.0.1/ossec-wui
