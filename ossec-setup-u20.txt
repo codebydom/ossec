@@ -7,8 +7,8 @@ OSSEC SET UP
 5.) sudo apt install -y php php-cli php-common libapache2-mod-php apache2-utils sendmail inotify-tools
 6.) sudo apt install libz-dev libssl-dev libpcre2-dev build-essential libsystemd-dev
 7.) sudo apt install mailutils
-8.) wget https://github.com/ossec/ossec-hids/archive/refs/heads/master.zip
-9.) cd ossec-hids-master
+8.) wget https://github.com/ossec/ossec-hids/archive/refs/heads/master.zip && unzip master.zip
+9.) rm master.zip && cd ./ossec-hids-master
 10.) sudo sh install.sh
 11.) enter in root@localhost for email
 12.) sudo /var/ossec/bin/ossec-control start
